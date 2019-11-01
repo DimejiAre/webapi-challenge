@@ -32,6 +32,37 @@ router.post('/', [validateProjectBody],(req,res) => {
         })
 })
 
+router.put('/:id', [validateProjectID], (req,res) => {
+    const id = req.params.id;
+    const project = req.body;
+
+    db.update(id,project)
+        .then(response => {
+            res.status(200).json(response)
+        })
+        .catch(err => {
+            res.status(500).json({
+                error: `There was an error while saving the post to the database ${err}`
+            })
+        })
+})
+
+router.delete('/:id', [validateProjectID], (req,res) => {
+    const id = req.params.id;
+
+    db.remove(id)
+        .then(response => {
+            res.status(200).json({
+                message: `${response} project deleted`
+            })
+        })
+        .catch(err => {
+            res.status(500).json({
+                error: `There was an error while deleting the post from the database ${err}`
+            })
+        })
+})
+
 // Middleware
 
 function validateProjectID (req,res,next){
