@@ -8,6 +8,7 @@ const actions = require('./routers/actionRouter');
 
 const server = express();
 
+server.use(helmet())
 server.use(cors());
 server.use(express.json());
 server.use('/api/projects', projects);
