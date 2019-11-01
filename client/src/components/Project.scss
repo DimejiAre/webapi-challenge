@@ -1,0 +1,17 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: honeydew;
+    min-height: 100vh;
+
+    .action-card {
+        border: 1px solid black;
+        text-align: left;
+        width: 80vw;
+        border-radius: 15px;
+        margin: 10px 0;
+        padding: 20px;
+        background-color: lightgreen;
+    }
+}
