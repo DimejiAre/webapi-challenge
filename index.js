@@ -1,3 +1,9 @@
+const server = require('./server');
+
+server.listen(process.env.PORT, ()=>{
+    console.log(`listening on http://localhost:${process.env.PORT}`)
+})
+
 /*
 play this: https://www.youtube.com/watch?v=d-diB65scQU
 
