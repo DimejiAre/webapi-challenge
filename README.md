@@ -26,13 +26,25 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+=> Express is a lightweight web framework for node.js which makes it easier to create web applications and services. It provides the following features
+- Routing - It provides a way to break applications into smaller parts based on routes and use a separate request handler function for each route.
+- Middleware - It provides a way to use functions that can operate on a response or request object.
+
 - [ ] Describe Middleware?
+
+=>Middleware can be described as functions that get the request and response objects and can operate on them and either return the response or call the next middleware in the pipeline. They can be used for validating certain parameters before execution at the endpoints, for example, authentication.
 
 - [ ] Describe a Resource?
 
+=> A Resource is anything that can be obtained from the World Wide Web. Example, Web pages, resources, database data e.t.c
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+=> To let clients know a request is successful, and API should return with a success status respond code. These are normally of the form 2** for example, 200, 201.
+
 - [ ] How can we partition our application into sub-applications?
+
+=> Applications can be partitioned into sub-applications using the expres router feature. It does this by breaking down an application into different request handlers for each URL + HTTP method combination and then mapping incoming requests to them.
 
 ## Project Setup
 

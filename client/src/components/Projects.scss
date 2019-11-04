@@ -1,0 +1,23 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: honeydew;
+    min-height: 100vh;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .project-card {
+        width: 70vw;
+        height: 20vh;
+        margin: 20px 0;
+        padding: 20px;
+        text-align: left;
+        border: 1px solid black;
+        border-radius: 15px;
+        background-color: lightgreen;
+    }
+}
